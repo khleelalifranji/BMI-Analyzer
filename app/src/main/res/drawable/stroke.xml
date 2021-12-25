@@ -4,8 +4,12 @@
     android:shape="rectangle">
 
     <stroke
-        android:width="5dp"
+        android:width="2dp"
         android:color="@color/BMICOlOR">
     </stroke>
+
+    <solid
+        android:color="@color/white">
+    </solid>
 
 </shape>

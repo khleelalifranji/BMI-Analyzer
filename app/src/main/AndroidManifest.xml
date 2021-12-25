@@ -10,7 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BMIAnalayzer">
         <activity
-            android:name=".CompleteInformationActivity"
+            android:name=".editfood"
+            android:exported="false" />
+        <activity
+            android:name=".listfood"
+            android:exported="false" />
+        <activity
+            android:name=".addfood"
+            android:exported="false" />
+        <activity
+            android:name=".newrecord"
+            android:exported="false" />
+        <activity
+            android:name=".home"
+            android:exported="false" />
+        <activity
+            android:name=".complete"
             android:exported="false" />
         <activity
             android:name=".RegistrationActivity"

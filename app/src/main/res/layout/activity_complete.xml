@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".complete">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="BMI Analyzer"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+        />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10sp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16sp"
+            android:gravity="center"
+            android:padding="16sp"
+            android:text="Complete your information"
+            android:textColor="@color/BMICOlOR"
+            android:textSize="27dp"
+            android:textStyle="bold"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16sp"
+                android:gravity="center"
+                android:text="Gender"
+                android:textColor="@color/BMICOlOR"
+                android:textSize="16sp"
+                android:textStyle="bold"
+            />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginRight="16sp"
+                    android:buttonTint="@color/BMICOlOR"
+                    android:text="Male"
+                    android:textColor="@color/BMICOlOR"
+                    android:textSize="16sp"
+                />
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12sp"
+                    android:layout_marginRight="12sp"
+                    android:buttonTint="@color/BMICOlOR"
+                    android:text="Female"
+                    android:textSize="16sp"
+                    android:textColor="@color/BMICOlOR"
+                />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="20sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16sp"
+                android:layout_marginRight="16dp"
+                android:text="Weight"
+                android:textColor="@color/BMICOlOR"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/minWei"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16sp"
+                android:background="@drawable/stroke"
+                android:gravity="center"
+                android:onClick="minWei"
+                android:paddingBottom="2dp"
+                android:text="-"
+                android:textColor="@color/BMICOlOR"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/weight"
+                android:layout_width="100dp"
+                android:layout_height="24dp"
+                android:background="@drawable/stroke"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="92"
+                android:textColor="@color/BMICOlOR"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/maxWei"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_gravity="center"
+                android:background="@drawable/stroke"
+                android:gravity="center"
+                android:onClick="maxWei"
+                android:text="+"
+                android:textColor="@color/BMICOlOR"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Kg"
+                android:textColor="@color/BMICOlOR" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16sp"
+                android:layout_marginRight="16dp"
+                android:text="Length"
+                android:textColor="@color/BMICOlOR"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/minLength"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16sp"
+                android:background="@drawable/stroke"
+                android:gravity="center"
+                android:onClick="minLength"
+                android:paddingBottom="2dp"
+                android:text="-"
+                android:textColor="@color/BMICOlOR"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/length"
+                android:layout_width="100dp"
+                android:layout_height="24dp"
+                android:background="@drawable/stroke"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="179"
+                android:textColor="@color/BMICOlOR"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/maxLength"
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_gravity="center"
+                android:background="@drawable/stroke"
+                android:gravity="center"
+                android:onClick="maxLength"
+                android:text="+"
+                android:textColor="@color/BMICOlOR"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Cm"
+                android:textColor="@color/BMICOlOR" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="12sp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="12sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20dp"
+                android:text="BirthDay"
+                android:textColor="@color/BMICOlOR"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/birthday"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke"
+                android:gravity="center"
+                android:textColor="@color/BMICOlOR"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16sp"
+            android:background="@drawable/co"
+            android:onClick="save"
+            android:text="Save Data"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

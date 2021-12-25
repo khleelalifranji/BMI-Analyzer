@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".newrecord">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="BMI Analyzer"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+        />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="New Record"
+        android:textColor="@color/BMICOlOR"
+        android:textStyle="bold"
+        android:textSize="21dp"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16sp"
+        android:orientation="horizontal"
+    >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16dp"
+            android:text="Weight"
+            android:textColor="@color/BMICOlOR"
+            android:textStyle="bold"
+            android:textSize="18sp"
+        />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/minWei"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16sp"
+            android:background="@drawable/stroke"
+            android:gravity="center"
+            android:onClick="minWei"
+            android:paddingBottom="2dp"
+            android:text="-"
+            android:textSize="16sp"
+            android:textColor="@color/BMICOlOR"
+        />
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:background="@drawable/stroke"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="92"
+            android:textColor="@color/BMICOlOR"
+            android:textSize="16sp"
+        />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/maxWei"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_marginRight="10sp"
+            android:layout_gravity="center"
+            android:background="@drawable/stroke"
+            android:gravity="center"
+            android:onClick="maxWei"
+            android:text="+"
+            android:textColor="@color/BMICOlOR"
+            android:textSize="16sp"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="24dp"
+            android:text="Kg"
+            android:textColor="@color/BMICOlOR"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16sp"
+        android:layout_marginTop="16sp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16sp"
+        android:orientation="horizontal"
+    >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16dp"
+            android:text="Length"
+            android:textColor="@color/BMICOlOR"
+            android:textStyle="bold"
+            android:textSize="18sp"
+        />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/minLength"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16sp"
+            android:background="@drawable/stroke"
+            android:gravity="center"
+            android:onClick="minLength"
+            android:paddingBottom="2dp"
+            android:text="-"
+            android:textColor="@color/BMICOlOR"
+            android:textSize="16sp"
+        />
+
+        <EditText
+            android:id="@+id/length"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:background="@drawable/stroke"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="179"
+            android:textSize="16sp"
+            android:textColor="@color/BMICOlOR"
+        />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/maxLength"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_gravity="center"
+            android:background="@drawable/stroke"
+            android:gravity="center"
+            android:onClick="maxLength"
+            android:text="+"
+            android:textSize="16sp"
+            android:textColor="@color/BMICOlOR"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Cm"
+            android:textColor="@color/BMICOlOR" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16sp"
+        android:layout_marginTop="16sp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="12sp"
+        android:orientation="horizontal"
+    >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16dp"
+            android:text="Date"
+            android:textColor="@color/BMICOlOR"
+            android:textSize="18sp"
+            android:textStyle="bold"
+        />
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="150dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/stroke"
+            android:gravity="center"
+            android:textColor="@color/BMICOlOR"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16sp"
+        android:layout_marginTop="16sp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16dp"
+            android:text="Time"
+            android:textColor="@color/BMICOlOR"
+            android:textSize="18sp"
+            android:textStyle="bold"
+        />
+
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="150dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/stroke"
+            android:gravity="center"
+            android:textColor="@color/BMICOlOR"
+            android:textSize="16sp"
+        />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_saveData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_marginTop="32dp"
+        android:onClick="save"
+        android:background="@drawable/co"
+        android:text="Save Data"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+    />
+
+</LinearLayout>
